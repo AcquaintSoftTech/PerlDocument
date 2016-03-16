@@ -1,0 +1,609 @@
+my $all_cats = $app->get_categories();
+
+_esummary_slide-all_cats: $VAR1 = [
+          {
+            'name' => 'Employee Engagement',
+            'questions' => [
+                             [
+                               '00_01',
+                               'I am willing to contribute a great deal of effort beyond what is normally expected to help Cardinal Health succeed.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '00_02',
+                               'I am proud to work for Cardinal Health.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '00_03',
+                               'I would refer friends or family members to Cardinal Health as a good place to work.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '00_04',
+                               'The company really inspires the very best in me in the way of job performance.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '00_05',
+                               'I intend to stay employed at Cardinal Health for at least the next twelve months.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '00_06',
+                               'I can see a clear link between my work and Cardinal Health\'s objectives.',
+                               'AD2_49_3'
+                             ]
+                           ],
+            'wgi_compat' => 1,
+            'id' => '1'
+          },
+          {
+            'name' => 'Manager Effectiveness',
+            'questions' => [
+                             [
+                               '01_09',
+                               'My manager considers the opinions and feelings of others when making decisions.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_03',
+                               'My manager is accessible and approachable.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_05',
+                               'My manager cares about my well-being.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_08',
+                               'My manager creates enthusiasm for assignments and organizational goals.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_13',
+                               'My manager addresses employee concerns quickly and appropriately.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_15',
+                               'I receive meaningful recognition when I do a good job.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_16',
+                               'My manager provides me with timely and useful feedback.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_18',
+                               'My manager encourages and supports my career development.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_19',
+                               'My manager sets clear performance expectations for me.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '03_13',
+                               'I trust my manager.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '03_17',
+                               'My manager treats people fairly.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '03_18',
+                               'I can express my opinion to my manager even when we disagree.',
+                               'AD2_49_3'
+                             ]
+                           ],
+            'wgi_compat' => 1,
+            'id' => '2'
+          },
+          {
+            'wgi_compat' => 1,
+            'questions' => [
+                             [
+                               '00_04',
+                               'The company really inspires the very best in me in the way of job performance.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '01_08',
+                               'At Cardinal Health, employees are treated as individuals regardless of age, race, gender, religion, color, national origin, sexual orientation/expression or physical capabilities.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '01_09',
+                               'My manager considers the opinions and feelings of others when making decisions.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '01_10',
+                               'In my workgroup, diverse perspectives and values are encouraged.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '01_12',
+                               'My coworkers recognize and value each other\'s unique strengths, regardless of differences.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '01_13',
+                               'My manager seeks my input on important issues and decisions.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_02',
+                               'In my workgroup, we encourage respectful debate and disagreement.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_03',
+                               'My manager is accessible and approachable.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_04',
+                               'In my workgroup, we treat each other with dignity and respect.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '03_17',
+                               'My manager treats people fairly.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '03_18',
+                               'I can express my opinion to my manager even when we disagree.',
+                               'AD2_49_3'
+                             ]
+                           ],
+            'name' => 'Inclusion',
+            'id' => '3'
+          },
+          {
+            'id' => '4',
+            'questions' => [
+                             [
+                               '00_15',
+                               'Cardinal Health compensation plans reward outstanding job performance.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '00_16',
+                               'I am paid fairly for the work I do.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '01_12',
+                               'My coworkers recognize and value each other\'s unique strengths, regardless of differences.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_07',
+                               'Successful team efforts are recognized by leadership.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_11',
+                               'In my workgroup, we celebrate our successes.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_15',
+                               'I receive meaningful recognition when I do a good job.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_17',
+                               'I have the authority to make decisions necessary to do my job effectively.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_18',
+                               'My manager encourages and supports my career development.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '03_04',
+                               'I have sufficient flexibility to effectively manage my work and personal life.',
+                               'AD2_49_3'
+                             ]
+                           ],
+            'wgi_compat' => 1,
+            'name' => 'Recognition'
+          },
+          {
+            'id' => '5',
+            'questions' => [
+                             [
+                               '00_08',
+                               'In my workgroup, we make decisions that balance the near and long term.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '00_09',
+                               'In my workgroup, we hold ourselves accountable for results.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '00_10',
+                               'The people I work with do their best for Cardinal Health.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '00_11',
+                               'In my workgroup, we demonstrate a bias for action.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '00_12',
+                               'In my workgroup, we follow through on our commitments.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '00_13',
+                               'In my workgroup, we hold each other accountable for living the values.',
+                               'AD2_49_3'
+                             ]
+                           ],
+            'wgi_compat' => 1,
+            'name' => 'Accountability'
+          },
+          {
+            'id' => '6',
+            'questions' => [
+                             [
+                               '00_15',
+                               'Cardinal Health compensation plans reward outstanding job performance.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '00_16',
+                               'I am paid fairly for the work I do.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '00_17',
+                               'I am satisfied with the benefits I receive at Cardinal Health.',
+                               'AD2_49_3'
+                             ]
+                           ],
+            'wgi_compat' => 1,
+            'name' => 'Compensation & Benefits'
+          },
+          {
+            'name' => 'Future, Strategy, and Values',
+            'wgi_compat' => 1,
+            'questions' => [
+                             [
+                               '01_01',
+                               'Cardinal Health is making the changes necessary to compete effectively.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '01_02',
+                               'I believe Cardinal Health has an outstanding future.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '01_03',
+                               'I have a good understanding of Cardinal Health\'s core values.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '01_04',
+                               'I understand Cardinal Health\'s overall business strategy.',
+                               'AD2_49_3'
+                             ]
+                           ],
+            'id' => '7'
+          },
+          {
+            'id' => '8',
+            'name' => 'Innovation and Adaptability',
+            'wgi_compat' => 1,
+            'questions' => [
+                             [
+                               '01_15',
+                               'In my workgroup, we are encouraged to develop new and better ways of doing things.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '01_16',
+                               'In this company, taking a calculated risk and failing is better than not taking a risk at all.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '01_17',
+                               'In my workgroup, we leverage setbacks to learn and generate new ideas.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '01_18',
+                               'In my workgroup, we practice operational excellence.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '01_19',
+                               'My team works with speed and simplicity.',
+                               'AD2_49_3'
+                             ]
+                           ]
+          },
+          {
+            'questions' => [
+                             [
+                               '02_01',
+                               'In my workgroup, there is open and honest two-way communication.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_02',
+                               'In my workgroup, we encourage respectful debate and disagreement.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_03',
+                               'My manager is accessible and approachable.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_04',
+                               'In my workgroup, we treat each other with dignity and respect.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_05',
+                               'My manager cares about my well-being.',
+                               'AD2_49_3'
+                             ]
+                           ],
+            'wgi_compat' => 1,
+            'name' => 'Openness and Respect',
+            'id' => '9'
+          },
+          {
+            'id' => '10',
+            'questions' => [
+                             [
+                               '02_07',
+                               'Successful team efforts are recognized by leadership.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_08',
+                               'My manager creates enthusiasm for assignments and organizational goals.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_09',
+                               'I have fun at work.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_10',
+                               'In my workgroup, we focus on the positive and expect the best.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_11',
+                               'In my workgroup, we celebrate our successes.',
+                               'AD2_49_3'
+                             ]
+                           ],
+            'wgi_compat' => 1,
+            'name' => 'Optimism and Spirit'
+          },
+          {
+            'id' => '11',
+            'questions' => [
+                             [
+                               '02_13',
+                               'My manager addresses employee concerns quickly and appropriately.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_14',
+                               'I know what it takes to advance my career at Cardinal Health.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_15',
+                               'I receive meaningful recognition when I do a good job.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_16',
+                               'My manager provides me with timely and useful feedback.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_17',
+                               'I have the authority to make decisions necessary to do my job effectively.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_18',
+                               'My manager encourages and supports my career development.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_19',
+                               'My manager sets clear performance expectations for me.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_20',
+                               'In my workgroup, we set stretch goals and objectives.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '02_21',
+                               'My manager and I frequently discuss my growth and development.',
+                               'AD2_49_3'
+                             ]
+                           ],
+            'wgi_compat' => 1,
+            'name' => 'Performance Management'
+          },
+          {
+            'id' => '12',
+            'name' => 'Resources and Support',
+            'wgi_compat' => 1,
+            'questions' => [
+                             [
+                               '03_01',
+                               'The safety and physical working conditions (space, lighting, noise, equipment, etc.) are good where I work.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '03_02',
+                               'I have the resources I need to do my job effectively.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '03_03',
+                               'I have the training I need to do my job effectively.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '03_04',
+                               'I have sufficient flexibility to effectively manage my work and personal life.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '03_05',
+                               'Site management\'s behaviors demonstrate a concern for the security of employees and company assets.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '03_06',
+                               'Cardinal Health is a good corporate citizen for supporting the communities in which it is located.',
+                               'AD2_49_3'
+                             ]
+                           ]
+          },
+          {
+            'id' => '13',
+            'questions' => [
+                             [
+                               '01_06',
+                               'In my workgroup, we recognize the value of teamwork.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '01_07',
+                               'In my workgroup, we work together with confidence and trust.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '01_08',
+                               'At Cardinal Health, employees are treated as individuals regardless of age, race, gender, religion, color, national origin, sexual orientation/expression or physical capabilities.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '01_09',
+                               'My manager considers the opinions and feelings of others when making decisions.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '01_10',
+                               'In my workgroup, diverse perspectives and values are encouraged.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '01_11',
+                               'My workgroup collaborates effectively with other teams.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '01_12',
+                               'My coworkers recognize and value each other\'s unique strengths, regardless of differences.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '01_13',
+                               'My manager seeks my input on important issues and decisions.',
+                               'AD2_49_3'
+                             ]
+                           ],
+            'wgi_compat' => 1,
+            'name' => 'Teamwork'
+          },
+          {
+            'id' => '14',
+            'name' => 'Tenacious Customer Commitment',
+            'questions' => [
+                             [
+                               '03_08',
+                               'At Cardinal Health, customer problems are dealt with quickly.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '03_09',
+                               'We use customer feedback to improve our products and processes.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '03_10',
+                               'There is a strong emphasis on customer service at Cardinal Health.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '03_11',
+                               'In my workgroup, we consistently consider the impact of decisions on our customers.',
+                               'AD2_49_3'
+                             ]
+                           ],
+            'wgi_compat' => 1
+          },
+          {
+            'wgi_compat' => 1,
+            'questions' => [
+                             [
+                               '03_13',
+                               'I trust my manager.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '03_14',
+                               'I know how to raise an integrity or compliance concern within Cardinal Health.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '03_15',
+                               'I can raise a concern without being subject to retaliation.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '03_16',
+                               'I trust Cardinal Health\'s senior leadership.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '03_17',
+                               'My manager treats people fairly.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '03_18',
+                               'I can express my opinion to my manager even when we disagree.',
+                               'AD2_49_3'
+                             ],
+                             [
+                               '03_19',
+                               'In my workgroup, we operate within the letter and spirit of the Standards of Business Conduct, applicable law and Cardinal Health\'s policies.',
+                               'AD2_49_3'
+                             ]
+                           ],
+            'name' => 'Trust',
+            'id' => '15'
+          }
+        ];

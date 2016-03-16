@@ -1,0 +1,16 @@
+DDL - Data Definition Language:
+Create Table,
+Alter Table.
+Drop Table.
+
+
+DML - Data Manipulation Language:
+Select Records,
+Update Records,
+Insert Records
+
+DCL - Data Control Language:
+Grant -
+Revoke -
+
+

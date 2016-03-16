@@ -1,0 +1,230 @@
+SELECT * FROM Customers; 
+
+SELECT - extracts data from a database
+UPDATE - updates data in a database
+DELETE - deletes data from a database
+INSERT INTO - inserts new data into a database
+CREATE DATABASE - creates a new database
+ALTER DATABASE - modifies a database
+CREATE TABLE - creates a new table
+ALTER TABLE - modifies a table
+DROP TABLE - deletes a table
+CREATE INDEX - creates an index (search key)
+DROP INDEX - deletes an index
+
+SELECT DISTINCT City FROM Customers; 
+
+Operator 	Description
+= 		Equal
+<> 		Not equal. Note: In some versions of SQL this operator may be 		written as !=
+> 		Greater than
+< 		Less than
+>= 		Greater than or equal
+<= 		Less than or equal
+BETWEEN 	Between an inclusive range
+LIKE 		Search for a pattern
+IN 		To specify multiple possible values for a column
+
+SELECT * FROM Customers WHERE Country='Germany' OR City='Berlin';
+
+SELECT * FROM Customers WHERE Country='Germany' AND City='Berlin';
+
+SELECT * FROM Customers WHERE Country='Germany' AND (City='Berlin' OR City='München');
+
+SELECT * FROM Customers ORDER BY Country;
+
+SELECT * FROM Customers ORDER BY Country DESC;
+
+SELECT * FROM Customers ORDER BY Country, CustomerName;
+
+SELECT * FROM Customers ORDER BY Country ASC, CustomerName ASC;
+
+SELECT * FROM Customers ORDER BY Country DESC, CustomerName DESC;
+
+INSERT INTO table_name VALUES (value1,value2,value3,...);
+
+INSERT INTO table_name (column1,column2,column3,...) VALUES (value1,value2,value3,...);
+
+INSERT INTO Customers (CustomerName, City, Country) VALUES ('Cardinal', 'Stavanger', 'Norway'); 
+
+UPDATE table_name SET column1=value1,column2=value2,... WHERE some_column=some_value;
+
+DELETE FROM table_name WHERE some_column=some_value;
+
+DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste' AND ContactName='Maria Anders'; 
+
+SELECT TOP number|percent column_name(s) FROM table_name;
+
+SELECT TOP 5 * FROM Customers order by customerid desc; 
+
+SELECT * FROM Customers WHERE City LIKE 's%'; Show recordes which city name start from s charcter
+
+SELECT * FROM Customers WHERE Country LIKE '%land%';
+
+SELECT * FROM Customers WHERE Country NOT LIKE '%land%'; 
+
+SELECT * FROM Customers WHERE City LIKE 'ber%'; 
+
+SELECT * FROM Customers WHERE City LIKE '%es%'; 
+
+SELECT * FROM Customers WHERE City LIKE 'L_n_on'; 
+
+SELECT * FROM Customers WHERE City LIKE '[a-z]%'; 
+
+SELECT * FROM Customers WHERE City LIKE '[abx]%'; 
+
+SELECT * FROM Customers WHERE City LIKE '[!bsp]%';
+
+SELECT * FROM Customers WHERE City NOT LIKE '[bsp]%';
+
+SELECT column_name(s) FROM table_name WHERE column_name IN (value1,value2,...);
+
+SELECT column_name(s) FROM table_name WHERE column_name BETWEEN value1 AND value2;
+SELECT * FROM Products WHERE Price BETWEEN 18 AND 25; 
+
+
+SELECT * FROM Products WHERE Price NOT BETWEEN 10 AND 20; 
+
+SELECT * FROM Products WHERE (Price BETWEEN 10 AND 20) AND NOT CategoryID IN (1,2,3); 
+
+SELECT * FROM Products WHERE ProductName BETWEEN 'C' AND 'G'; Fetch reconds between Start charcter c to G.
+
+
+SELECT * FROM Products WHERE ProductName NOT BETWEEN 'C' AND 'M'; 
+
+SELECT * FROM Orders WHERE OrderDate BETWEEN #07/04/1996# AND #07/09/1996#; 
+
+SELECT column_name AS alias_name FROM table_name;
+
+SELECT CustomerName AS Customer, ContactName AS [Contact Person] FROM Customers;
+
+SELECT CustomerName, Address+', '+City+', '+PostalCode+', '+Country AS Address
+FROM Customers;
+
+SELECT CustomerName, CONCAT(Address,', ',City,', ',PostalCode,', ',Country) AS Address FROM Customers;
+
+SELECT o.OrderID, o.OrderDate, c.CustomerName FROM Customers AS c, Orders AS o
+WHERE c.CustomerName="Around the Horn" AND c.CustomerID=o.CustomerID;
+
+SELECT Orders.OrderID, Orders.OrderDate, Customers.CustomerName FROM Customers, Orders WHERE Customers.CustomerName="Around the Horn" AND  Customers.CustomerID=Orders.CustomerID; 
+
+Different SQL JOINs
+
+Before we continue with examples, we will list the types of the different SQL JOINs you can use:
+
+INNER JOIN: Returns all rows when there is at least one match in BOTH tables.
+LEFT JOIN: Return all rows from the left table, and the matched rows from the right table.
+RIGHT JOIN: Return all rows from the right table, and the matched rows from the left table.
+FULL JOIN: Return all rows when there is a match in ONE of the tables.
+
+SELECT column_name(s) FROM table1 INNER JOIN table2 ON table1.column_name=table2.column_name;
+
+SELECT column_name(s) FROM table1 JOIN table2 ON table1.column_name=table2.column_name;
+
+SELECT column_name(s) FROM table1 LEFT JOIN table2 ON table1.column_name=table2.column_name;
+
+SELECT column_name(s) FROM table1 LEFT OUTER JOIN table2 ON table1.column_name=table2.column_name;
+
+SELECT Customers.CustomerName, Orders.OrderID FROM Customers Left JOIN Orders
+ON Customers.CustomerID=Orders.CustomerID ORDER BY Customers.CustomerName; 
+
+SELECT column_name(s) FROM table1 RIGHT JOIN table2 ON table1.column_name=table2.column_name;
+
+SELECT column_name(s) FROM table1 RIGHT OUTER JOIN table2 ON table1.column_name=table2.column_name;
+
+SELECT Customers.CustomerName, Orders.OrderID FROM Customers Right JOIN Orders
+ON Customers.CustomerID=Orders.CustomerID ORDER BY Customers.CustomerName; 
+
+SELECT column_name(s) FROM table1 FULL OUTER JOIN table2 ON table1.column_name=table2.column_name;
+
+The SQL UNION operator combines the result of two or more SELECT statements.
+
+SELECT column_name(s) FROM table1 UNION SELECT column_name(s) FROM table2;
+
+SELECT City FROM Customers UNION SELECT City FROM Suppliers ORDER BY City; 
+
+SELECT City FROM Customers UNION ALL SELECT City FROM Suppliers ORDER BY City; 
+
+
+SELECT City, Country FROM Customers WHERE Country='Germany' UNION 
+SELECT City, Country FROM Suppliers WHERE Country='Germany' ORDER BY City; 
+
+SELECT * INTO CustomersBackup2013 FROM Customers;
+
+INSERT INTO table2 SELECT * FROM table1;
+
+INSERT INTO table2 (column_name(s)) SELECT column_name(s) FROM table1;
+
+INSERT INTO Customers (CustomerName, Country) SELECT SupplierName, Country FROM Suppliers;
+
+INSERT INTO Customers (CustomerName, Country) SELECT SupplierName, Country FROM Suppliers WHERE Country='Germany'; 
+
+CREATE TABLE Persons
+(
+PersonID int,
+LastName varchar(255),
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255)
+); 
+
+
+SQL Constraints
+SQL constraints are used to specify rules for the data in a table.
+In SQL, we have the following constraints:
+
+    NOT NULL - Indicates that a column cannot store NULL value
+    UNIQUE - Ensures that each row for a column must have a unique value
+    PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Ensures that a column (or combination of two or more columns) have a unique identity which helps to find a particular record in a table more easily and quickly
+    FOREIGN KEY - Ensure the referential integrity of the data in one table to match values in another table
+    CHECK - Ensures that the value in a column meets a specific condition
+    DEFAULT - Specifies a default value for a column
+
+
+CREATE TABLE Persons
+(
+P_Id int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255),
+UNIQUE (P_Id)
+)
+
+ALTER TABLE Persons ADD UNIQUE (P_Id)
+
+Chandra Shekhar-
+SCM Administration :
+
+User not able to do integration, User not able to client,
+
+which command using to create a client in Perforce GIT.
+Perforce Administration - Verious command , client command , server command, trigger.
+
+GIT, GIT HUB, Automation Testing,
+how do you debug a perl script,
+What method we use when we read output of command through script,
+
+how do know how many line in this scalar veriable ?
+
+if you want to store out put in hash like,
+What are the opetation in array ?
+what is shift and unshift ?
+how do a split a string ?
+
+what is the verious function operation command /
+
+difference between system and execute ?
+
+Suppose you want ,  I have a hash, how to print that hash value.
+
+Array of names
+I want to sort with third character ? 
+
+
+Hari, Mahesh , Kabir
+
+
+
+
+
